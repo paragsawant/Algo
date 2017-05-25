@@ -1,0 +1,1 @@
+﻿https://channel9.msdn.com/Forums/TechOff/A-simple-and-pure-C-implementation-of-the-good-old-linked-list
