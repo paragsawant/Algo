@@ -11,5 +11,11 @@ namespace TestConsoleApplication
         public Node left;
         public Node right;
         public int data;
+
+        public void DisplayNode()
+        {
+            Console.Write(data + " ");
+        }
     }
+
 }

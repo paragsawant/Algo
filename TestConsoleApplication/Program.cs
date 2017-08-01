@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Text;
 using System.Threading.Tasks;
+using TestConsoleApplication.BST;
 
 namespace TestConsoleApplication
 {
@@ -50,8 +51,32 @@ namespace TestConsoleApplication
             Console.WriteLine("Position 5: " + list.Retrieve(5).NodeContent);
             Console.WriteLine();
 
-            Console.ReadLine();   
-           /// vsr test = countLength1();
+            Console.ReadLine();
+            /// vsr test = countLength1();
+            Tree BST = new Tree();
+            BST.Insert(30);
+            BST.Insert(35);
+            BST.Insert(57);
+            BST.Insert(15);
+            BST.Insert(63);
+            BST.Insert(49);
+            BST.Insert(89);
+            BST.Insert(77);
+            BST.Insert(67);
+            BST.Insert(98);
+            BST.Insert(91);
+            Console.WriteLine("Inorder Traversal : ");
+            BST.InOrder(BST.ReturnNode());
+            Console.WriteLine(" ");
+            Console.WriteLine();
+            Console.WriteLine("Preorder Traversal : ");
+            BST.PreOrder(BST.ReturnNode());
+            Console.WriteLine(" ");
+            Console.WriteLine();
+            Console.WriteLine("Postorder Traversal : ");
+            BST.PostOrder(BST.ReturnNode());
+            Console.WriteLine(" ");
+            Console.ReadLine();
         }
 
         public static bool isPalindrome(string input)
