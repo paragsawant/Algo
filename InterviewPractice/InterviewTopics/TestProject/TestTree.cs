@@ -6,7 +6,7 @@ namespace TestProject
     public class TestTree
     {
         [Fact]
-        public void TestPreOrder()
+        static void TestPreOrder()
         {
 
         }
