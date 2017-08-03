@@ -6,6 +6,7 @@ using Xunit;
 
 namespace TestProject
 {
+
     public class TestBinaryToDecimal
     {
         [Fact]

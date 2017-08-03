@@ -9,7 +9,7 @@ namespace InterviewTopics
         public static int Convert(string s)
         {
             if (s == "")
-                throw new Exception("Invalid input");
+                throw new ArgumentNullException("No input");
 
             int OnOff = 0;
             int result = 0;
