@@ -4,20 +4,20 @@ namespace InterviewTopics
 {
     public class Tree
     {
-        public Node root;
+        public TreeNode root;
         public Tree()
         {
             root = null;
         }
 
-        public Node ReturnNode()
+        public TreeNode ReturnNode()
         {
             return root;
         }
 
         public void Insert(int i)
         {
-            Node newNode = new Node();
+            TreeNode newNode = new TreeNode();
             newNode.data = i;
             if (root == null)
             {
@@ -25,8 +25,8 @@ namespace InterviewTopics
             }
             else
             {
-                Node currentNode = root;
-                Node parentNode;
+                TreeNode currentNode = root;
+                TreeNode parentNode;
                 while (true)
                 {
                     parentNode = currentNode;
@@ -52,7 +52,7 @@ namespace InterviewTopics
             }
         }
 
-        public void PreOrder(Node root)
+        public void PreOrder(TreeNode root)
         {
             if (root != null)
             {
@@ -61,7 +61,7 @@ namespace InterviewTopics
                 PreOrder(root.right);
             }
         }
-        public void InOrder(Node root)
+        public void InOrder(TreeNode root)
         {
             if (root != null)
             {
@@ -70,7 +70,7 @@ namespace InterviewTopics
                 InOrder(root.right);
             }
         }
-        public void PostOrder(Node root)
+        public void PostOrder(TreeNode root)
         {
             if (root != null)
             {

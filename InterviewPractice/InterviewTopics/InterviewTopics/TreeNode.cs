@@ -4,10 +4,10 @@ using System.Text;
 
 namespace InterviewTopics
 {
-    public class Node
+    public class TreeNode
     {
-        public Node left;
-        public Node right;
+        public TreeNode left;
+        public TreeNode right;
         public int data;
 
         public void DisplayNode()

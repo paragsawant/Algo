@@ -6,14 +6,14 @@ namespace InterviewTopics
 {
     public class BinaryTree
     {
-        Node root;
+        TreeNode root;
         static bool n1b1;
         static bool n2b2;
-        Node FindLCA(int n1,int n2)
+        TreeNode FindLCA(int n1,int n2)
         {
             n1b1 = false;
             n2b2 = false;
-            Node lca= FindLCA(root, n1, n2);
+            TreeNode lca= FindLCA(root, n1, n2);
 
             if (n1b1 && n2b2)
                 return lca;
@@ -21,7 +21,7 @@ namespace InterviewTopics
             return null;
         }
 
-        Node FindLCA(Node node, int n1, int n2)
+        TreeNode FindLCA(TreeNode node, int n1, int n2)
         {
             if (node == null)
                 return null;
@@ -38,8 +38,8 @@ namespace InterviewTopics
                 return node;
             }
 
-            Node left_lca = FindLCA(node.left, n1, n2);
-            Node right_rca = FindLCA(node.right, n1, n2);
+            TreeNode left_lca = FindLCA(node.left, n1, n2);
+            TreeNode right_rca = FindLCA(node.right, n1, n2);
 
             if (left_lca !=null && right_rca!=null)
             {
