@@ -9,11 +9,11 @@ namespace InterviewTopics
         TreeNode root;
         static bool n1b1;
         static bool n2b2;
-        TreeNode FindLCA(int n1,int n2)
+        TreeNode FindLCA(int n1, int n2)
         {
             n1b1 = false;
             n2b2 = false;
-            TreeNode lca= FindLCA(root, n1, n2);
+            TreeNode lca = FindLCA(root, n1, n2);
 
             if (n1b1 && n2b2)
                 return lca;
@@ -27,7 +27,7 @@ namespace InterviewTopics
                 return null;
 
             if (node.data == n1)
-                {
+            {
                 n1b1 = true;
                 return node;
 
@@ -41,7 +41,7 @@ namespace InterviewTopics
             TreeNode left_lca = FindLCA(node.left, n1, n2);
             TreeNode right_rca = FindLCA(node.right, n1, n2);
 
-            if (left_lca !=null && right_rca!=null)
+            if (left_lca != null && right_rca != null)
             {
                 return node;
             }

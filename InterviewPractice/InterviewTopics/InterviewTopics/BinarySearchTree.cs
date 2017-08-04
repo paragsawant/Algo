@@ -9,7 +9,7 @@ namespace InterviewTopics
         public int GetMax(TreeNode root)
         {
             TreeNode currentNode = root;
-            while (root.right!=null)
+            while (root.right != null)
             {
                 currentNode = root.right;
             }
