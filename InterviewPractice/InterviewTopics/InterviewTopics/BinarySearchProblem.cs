@@ -35,17 +35,17 @@ namespace InterviewTopics
         public int BinarySearch(int element,int [] inputs)
         {
             int low = 0;
-            int high = inputs.Length-1;
+            int high = inputs.Length - 1;
 
-            while (low<=high)
+            while (low <= high)
             {
                 int mid = low + (high - low) / 2;
 
-                if (inputs[mid]==element)
+                if (inputs[mid] == element)
                 {
                     return mid;
                 }
-                else if(inputs[mid]<element)
+                else if (inputs[mid] < element)
                 {
                     low = mid + 1;
                 }
