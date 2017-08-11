@@ -32,7 +32,7 @@ namespace InterviewTopics
             return -1;
         }
 
-        public int BinarySearch(int element,int [] inputs)
+        public int BinarySearch(int element, int[] inputs)
         {
             int low = 0;
             int high = inputs.Length - 1;
@@ -56,6 +56,55 @@ namespace InterviewTopics
             }
 
             return -1;
+        }
+
+        public int FindElementInRoatedArray(int low, int high, int element, int[] inputs)
+        {
+
+            int mid = (low + high) / 2;
+            if (inputs[mid] == element)
+            {
+                return mid;
+            }
+
+            if (inputs[low] <= inputs[mid])
+            {
+                if (element >= inputs[low] && element < inputs[mid])
+                {
+                    return FindElementInRoatedArray(low, mid - 1, element, inputs);
+                }
+
+                return FindElementInRoatedArray(mid + 1, high, element, inputs);
+            }
+            else if (element >= inputs[mid] && element < inputs[high])
+            {
+                return FindElementInRoatedArray(mid + 1, high, element, inputs);
+            }
+
+            return FindElementInRoatedArray(low, mid - 1, element, inputs);
+        }
+
+        public int SearchElementInRoatedArray(int[] inputs, int element)
+        {
+
+            int low = 0;
+            int high = inputs.Length - 1;
+
+            if (low > high)
+            {
+                return -1;
+            }
+            if (inputs[low] == element)
+            {
+                return 0;
+            }
+
+            if (inputs[high] == element)
+            {
+                return high;
+            }
+
+            return FindElementInRoatedArray(low, high, element, inputs);
         }
     }
 }
