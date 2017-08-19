@@ -11,8 +11,11 @@ namespace InterviewTopics
             return 0;
         }
 
-        public int SearchToFindUnique(int low, int high, int[] inputs)
+        public int SearchToFindUnique(int[] inputs)
         {
+            int low = 0;
+            int high = inputs.Length - 1;
+
             if (low > high)
             {
                 return -1;
@@ -23,16 +26,44 @@ namespace InterviewTopics
                 return inputs[low];
             }
 
-            int mid = (low + high) / 2;
-
-            if (mid % 2 == 0)
+            while (low <= high)
             {
-                return -1;
+                if (low == high)
+                {
+                    return inputs[low];
+
+                }
+
+                int mid = (low + high) / 2;
+
+                if (mid % 2 == 0)
+                {
+                    if (inputs[mid] == inputs[mid - 1])
+                    {
+                        low = mid + 1;
+                    }
+                    else
+                    {
+                        high = mid - 2;
+                    }
+                }
+                else
+                {
+                    if (inputs[mid] == inputs[mid + 1])
+                    {
+                        low = mid - 2;
+                    }
+                    else
+                    {
+                        high = mid + 1;
+                    }
+                }
             }
+
             return -1;
         }
 
-        public int BinarySearch(int element,int [] inputs)
+        public int BinarySearch(int element, int[] inputs)
         {
             int low = 0;
             int high = inputs.Length - 1;

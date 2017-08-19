@@ -11,12 +11,6 @@ namespace UnitTestProject
     [TestClass]
     public class BinarySearchTest
     {
-        [TestMethod]
-        public void TestBinaySearch()
-        {
-            BinarySearchProblem bs = new BinarySearchProblem();
-            var poistion = bs.BinarySearch(45, new int[] { 1, 2, 3, 4, 5, 7, 25, 40, 45, 55 });
-            Assert.AreEqual(poistion, 8);
-        }
+
     }
 }

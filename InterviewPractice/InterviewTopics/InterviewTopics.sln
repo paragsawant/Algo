@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApplication", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{3D540760-9F8A-4E64-B51E-1A60EDCC6E22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOD", "OOD", "{1B002C99-75F6-4455-B596-4FCBFD2C9603}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fleet Managment System", "Fleet Managment System", "{A604E963-BFB5-4C61-80DF-8C1B042838C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A604E963-BFB5-4C61-80DF-8C1B042838C1} = {1B002C99-75F6-4455-B596-4FCBFD2C9603}
 	EndGlobalSection
 EndGlobal
