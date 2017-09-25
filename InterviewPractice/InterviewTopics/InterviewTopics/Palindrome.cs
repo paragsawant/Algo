@@ -6,7 +6,7 @@ namespace InterviewTopics
 {
     public class Palindrome
     {
-        public static bool isPalindrome(string input)
+        public bool isPalindrome(string input)
         {
             int inputLength = input.Length;
             for (int i = 0; i < inputLength / 2; i++)
@@ -20,7 +20,7 @@ namespace InterviewTopics
             return true;
         }
 
-        public static bool isPalindrome(int input)
+        public bool isPalindrome(int input)
         {
             int reversed = 0, n = input;
 
