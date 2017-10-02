@@ -52,6 +52,8 @@
     <Compile Include="ArrayProblemTest.cs" />
     <Compile Include="BinarySearchProblemTest.cs" />
     <Compile Include="BinarySearchTest.cs" />
+    <Compile Include="EditDistanceTest.cs" />
+    <Compile Include="LongestCommonSubSequenceTest.cs" />
     <Compile Include="PalindromeTest.cs" />
     <Compile Include="RandomQuestionTest.cs" />
     <Compile Include="StackTest.cs" />
