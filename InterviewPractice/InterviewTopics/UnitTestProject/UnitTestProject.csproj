@@ -55,6 +55,7 @@
     <Compile Include="EditDistanceTest.cs" />
     <Compile Include="LinkedListTest.cs" />
     <Compile Include="LongestCommonSubSequenceTest.cs" />
+    <Compile Include="LongestIncreasingSubsequenceTest.cs" />
     <Compile Include="PalindromeTest.cs" />
     <Compile Include="RandomQuestionTest.cs" />
     <Compile Include="StackTest.cs" />
