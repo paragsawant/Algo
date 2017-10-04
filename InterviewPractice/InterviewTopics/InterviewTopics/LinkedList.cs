@@ -6,7 +6,7 @@ namespace InterviewTopics
 {
     public class LinkedList
     {
-        LinkedListNode head;
+        public LinkedListNode head;
 
         public void Add(int data)
         {
@@ -59,7 +59,7 @@ namespace InterviewTopics
             }
 
             currentNode.nextNode = node;
-            
+
         }
 
         public void DeleteNodeLastNode()
@@ -87,6 +87,36 @@ namespace InterviewTopics
                 }
             }
 
+        }
+
+        public LinkedListNode Reverse(LinkedListNode node)
+        {
+            LinkedListNode currentNode = node;
+            LinkedListNode previousNode = null;
+            LinkedListNode nextNode = null;
+
+            while (currentNode != null)
+            {
+                nextNode = currentNode.nextNode;
+                currentNode.nextNode = previousNode;
+                previousNode = currentNode;
+                currentNode = nextNode;
+            }
+            node = previousNode;
+            return node;
+        }
+
+        public string PrintLinkedList(LinkedListNode node)
+        {
+            StringBuilder sb = new StringBuilder();
+            LinkedListNode currentNode = node;
+            while (currentNode != null)
+            {
+                sb.Append(currentNode.data);
+                currentNode = currentNode.nextNode;
+            }
+
+            return sb.ToString();
         }
     }
 }
