@@ -9,6 +9,7 @@ namespace InterviewTopics
     {
         public string Reverse(string s)
         {
+            var output = s.Split(' ');
             Stack<string> stack = new Stack<string>();
             s.Trim();
             s = s.Contains("  ") ? s.Replace("  ", " ") : s;

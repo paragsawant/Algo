@@ -15,7 +15,10 @@ namespace UnitTestProject
         public void TestSearchElement()
         {
             StacksProblem sp = new StacksProblem();
-            sp.GetEvaluatedValue("5*5+2+3*5");
+            var result = sp.GetEvaluatedValue("5*5+2+3*5+6");
+            Assert.AreEqual(result,48);
+            result = sp.GetEvaluatedValue("5*5+2+3*5");
+            Assert.AreEqual(result, 42);
         }
 
     }

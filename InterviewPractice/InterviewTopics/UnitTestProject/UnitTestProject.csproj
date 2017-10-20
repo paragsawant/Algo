@@ -51,6 +51,7 @@
     <Compile Include="ArrayProblemTest.cs" />
     <Compile Include="BinarySearchProblemTest.cs" />
     <Compile Include="BinarySearchTest.cs" />
+    <Compile Include="RandomTest.cs" />
     <Compile Include="StackTest.cs" />
     <Compile Include="TestBinaryToDecimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

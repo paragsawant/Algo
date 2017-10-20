@@ -4,8 +4,16 @@ using System.Text;
 
 namespace InterviewTopics
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Palindrome
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static bool isPalindrome(string input)
         {
             int inputLength = input.Length;
@@ -20,6 +28,11 @@ namespace InterviewTopics
             return true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static bool isPalindrome(int input)
         {
             int reversed = 0, n = input;

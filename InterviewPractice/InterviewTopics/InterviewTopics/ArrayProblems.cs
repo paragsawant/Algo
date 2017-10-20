@@ -89,6 +89,54 @@ namespace InterviewTopics
             return -1;
         }
 
+
+        public int MagicIndexForNonDistinct(int[] inputs)
+        {
+            int low = 0;
+            int high = inputs.Length - 1;
+
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+
+                if (inputs[mid] == mid)
+                {
+                    return mid;
+                }
+                else if (inputs[mid] < mid)
+                {
+                    low = mid + 1;
+                }
+                else
+                {
+                    high = mid - 1;
+                }
+            }
+
+            return -1;
+        }
+
+        public int MagicIndexRec(int[] inputs, int low, int high)
+        {
+            int mid = (low + high) / 2;
+            if (inputs[mid] == mid)
+            {
+                return mid;
+            }
+
+            int index;
+
+            int lindex = Math.Min(mid - 1, inputs[mid]);
+            index = MagicIndexRec(inputs, low, lindex);
+            if (index>=0)
+            {
+                return index;
+            }
+
+            int rindex = Math.Max(mid + 1, inputs[mid]);
+            return MagicIndexRec(inputs, rindex, high);
+        }
+
         #endregion 2
 
     }

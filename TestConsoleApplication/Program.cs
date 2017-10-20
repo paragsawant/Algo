@@ -77,6 +77,10 @@ namespace TestConsoleApplication
             BST.PostOrder(BST.ReturnNode());
             Console.WriteLine(" ");
             Console.ReadLine();
+
+
+
+            
         }
 
         public static bool isPalindrome(string input)
