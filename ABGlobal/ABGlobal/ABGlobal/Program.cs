@@ -13,6 +13,7 @@ namespace ABGlobal
     {
         static void Main(string[] args)
         {
+            //http://cc.davelozinski.com/c-sharp/fastest-way-to-read-text-files
             Dictionary<int, UserOrderDetails> _userDetails = new Dictionary<int, UserOrderDetails>();
             //reading user details csv and adding that to dictonary
             int userCount = 0;
