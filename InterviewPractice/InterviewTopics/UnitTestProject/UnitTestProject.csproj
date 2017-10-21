@@ -48,10 +48,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnagramTest.cs" />
     <Compile Include="ArrayProblemTest.cs" />
     <Compile Include="BinarySearchProblemTest.cs" />
     <Compile Include="BinarySearchTest.cs" />
     <Compile Include="RandomTest.cs" />
+    <Compile Include="EditDistanceTest.cs" />
+    <Compile Include="LinkedListTest.cs" />
+    <Compile Include="LongestCommonSubSequenceTest.cs" />
+    <Compile Include="LongestIncreasingSubsequenceTest.cs" />
+    <Compile Include="NumberTest.cs" />
+    <Compile Include="PalindromeTest.cs" />
+    <Compile Include="RandomQuestionTest.cs" />
     <Compile Include="StackTest.cs" />
     <Compile Include="TestBinaryToDecimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

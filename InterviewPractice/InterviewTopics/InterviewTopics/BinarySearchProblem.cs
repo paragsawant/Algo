@@ -10,7 +10,7 @@ namespace InterviewTopics
         {
             return 0;
         }
-
+        Stack<int> stack = new Stack<int>();
         public int SearchToFindUnique(int[] inputs)
         {
             int low = 0;

@@ -6,9 +6,9 @@ namespace InterviewTopics
 {
     public class LinkedList
     {
-        LinkedListNode head;
+        public LinkedListNode head;
 
-        void push(int data)
+        public void Add(int data)
         {
             LinkedListNode newNode = new LinkedListNode(data);
             if (head == null)
@@ -24,10 +24,9 @@ namespace InterviewTopics
             }
 
             tempNode.nextNode = newNode;
-
         }
 
-        void push(LinkedListNode node)
+        public void Add(LinkedListNode node)
         {
             if (head == null)
             {
@@ -45,7 +44,7 @@ namespace InterviewTopics
             node.nextNode = null;
         }
 
-        void append(LinkedListNode node)
+        public void Append(LinkedListNode node)
         {
             if (head == null)
             {
@@ -60,19 +59,15 @@ namespace InterviewTopics
             }
 
             currentNode.nextNode = node;
-            {
 
-            }
         }
 
-        void deleteNodeLastNode()
+        public void DeleteNodeLastNode()
         {
 
         }
 
-
-
-        void deleteNode(int value)
+        public void DeleteNode(int value)
         {
             LinkedListNode returnNode = new LinkedListNode(0)
             {
@@ -92,6 +87,36 @@ namespace InterviewTopics
                 }
             }
 
+        }
+
+        public LinkedListNode Reverse(LinkedListNode node)
+        {
+            LinkedListNode currentNode = node;
+            LinkedListNode previousNode = null;
+            LinkedListNode nextNode = null;
+
+            while (currentNode != null)
+            {
+                nextNode = currentNode.nextNode;
+                currentNode.nextNode = previousNode;
+                previousNode = currentNode;
+                currentNode = nextNode;
+            }
+            node = previousNode;
+            return node;
+        }
+
+        public string PrintLinkedList(LinkedListNode node)
+        {
+            StringBuilder sb = new StringBuilder();
+            LinkedListNode currentNode = node;
+            while (currentNode != null)
+            {
+                sb.Append(currentNode.data);
+                currentNode = currentNode.nextNode;
+            }
+
+            return sb.ToString();
         }
     }
 }

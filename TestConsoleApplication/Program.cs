@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Data;
@@ -11,6 +11,8 @@ namespace TestConsoleApplication
 {
     public class Program4
     {
+        Stack stack = new Stack();
+        Stack.
         static void Main(string[] args)
         {
             FindDuplicateCharacters("parag");

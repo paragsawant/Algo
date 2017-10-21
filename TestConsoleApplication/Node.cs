@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +11,9 @@ namespace TestConsoleApplication
         public Node left;
         public Node right;
         public int data;
-
         public void DisplayNode()
         {
             Console.Write(data + " ");
         }
     }
-
 }
